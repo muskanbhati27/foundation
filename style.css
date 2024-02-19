@@ -32,6 +32,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 }
 .logo {
   font-size: 16px;
@@ -130,6 +131,7 @@ body {
   top: 18em;
   content: "";
   left: -3.8em;
+  z-index: 1;
 }
 .home_section_div1 h1 {
   color: white;
@@ -144,6 +146,27 @@ body {
   font-weight: 400;
   width: 100%;
   margin: 1em 0;
+}
+#Submenu {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  visibility: hidden;
+  z-index: 1;
+}
+li:hover ul #Submenu {
+  opacity: 1;
+  top: 80px;
+  visibility: visible;
+}
+#Submenu li {
+  float: none;
+  width: 100%;
+}
+#Submenu a:hover {
+  background-color: white;
+  color: #172430;
 }
 .home_subheading {
   background-color: #0c304e;
@@ -228,7 +251,7 @@ body {
   align-items: center;
   width: 38%;
   height: 78vh;
-  z-index: 1;
+  z-index: -1;
   margin-top: 5em;
 }
 .about_heading_container {

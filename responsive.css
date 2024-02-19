@@ -144,6 +144,7 @@
     height: 25vh;
     width: 75%;
     left: 25%;
+    z-index: 0;
   }
   .header_nav {
     width: 90%;
@@ -248,6 +249,7 @@
   .home_section_div1 {
     padding: 0em 0em 1em 1em;
     width: 100%;
+    z-index: -1;
   }
   .home_section_div1 h1 {
     font-size: 1.6em;
@@ -417,10 +419,23 @@
   }
   .footer_section {
     margin-top: 1.5em;
-}
+  }
   /* footer section */
 }
-
+@media (max-width: 375px) {
+  .about_section {
+    margin-top: 31em;
+  }
+  .about_heading_div2 button {
+    margin-bottom: 6em;
+  }
+  .value_section {
+    margin-top: 4em;
+  }
+  #check:checked ~ .navbar {
+    height: 45vh;
+}
+}
 @media (max-width: 360px) {
   /* navbar section */
   #check:checked ~ .navbar {
@@ -438,6 +453,9 @@
     width: 83%;
     height: 50vh;
     margin-top: 6em;
+  }
+  .about_heading_div2 button {
+    margin-bottom: 1em;
   }
   .about_section::before {
     padding-bottom: 2em;
